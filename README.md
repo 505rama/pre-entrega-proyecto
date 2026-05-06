@@ -24,27 +24,16 @@ Sitio web inspirado en la estética clásica de Steam, desarrollado como pre-ent
 steam-retro/
 
 │
-
 ├── index.html
-
 ├── tienda.html
-
 │
-
 ├── css/
-
 │   └── styles.css
-
 │
-
 ├── img/
-
 │   └── (imágenes de juegos, logo, banner, etc.)
-
 │
-
 └── vid/
-
 &#x20;   └─── (videos x ej. trailers de juegos)
 
 
