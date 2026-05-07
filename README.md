@@ -39,7 +39,7 @@ steam-retro/
 │   └── (imágenes de juegos, logo, banner, etc.)
 
 
-└── vid/
+└── video/
 
 &#x20;   └─── (videos x ej. trailers de juegos)
 
