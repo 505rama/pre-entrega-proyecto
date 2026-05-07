@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Steam 2008</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="img/steam.png" alt="Logo de Steam">
+                </a>
+            </h1>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="juegos.html">Juegos</a></li>
+                    <li><a href="#demos">Demos</a></li>
+                    <li><a href="#descargas">Descargas</a></li>
+                    <li><a href="#contacto">Soporte</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="store">
+            <div class="store-container">
+                <div class="banner">
+                    <img src="img/banner.png" alt="Banner">
+                </div>
+                <aside class="sidebar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar en la tienda">
+                        <button>🔍</button>
+                    </div>
+                    <h3>BUSCAR JUEGOS</h3>
+                    <ul>
+                        <li><a href="#">Todos</a></li>
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Aventura</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Casual</a></li>
+                        <li><a href="#">Competitivo</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Estrategia</a></li>
+                        <li><a href="#">Indie</a></li>
+                        <li><a href="#">RPG</a></li>
+                        <li><a href="#">Simulación</a></li>
+                        <li><a href="#">Supervivencia</a></li>
+                        <li><a href="#">Terror</a></li>
+                    </ul>
+                </aside>
+                
+                <section class="store-content">
+                    <div class="slider">
+                        <button class="prev">◀</button>
+                        <div class="slide">
+                            <img src="img/gtaiv.png" alt="Grand Theft Auto IV">
+                            <div class="info">
+                                <h2>Grand Theft Auto IV</h2>
+                                <p class="price">$59.99</p>
+                            </div>    
+                        </div>
+                        <button class="next">▶</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-box">
+                    <a href="index.html"><h3>STEAM</h3></a>
+                    <p>© 2008 Valve Corporation. Todos los derechos reservados. Todas las marcas registradas pertenecen a sus respectivos dueños en EE. UU. y otros países.</p>
+                </div>
+                <div class="footer-box">
+                    <h3>ENLACES</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                        <li><a href="#accesibilidad">Accesibilidad</a></li>
+                        <li><a href="#politicas">Avisos y políticas</a></li>
+                        <li><a href="#reembolsos">Reembolsos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h3>REDES SOCIALES</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@Steam">Youtube</a></li>
+                        <li><a href="https://bsky.app/profile/steampowered.com">Bluesky</a></li>
+                        <li><a href="https://twitter.com/steam">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/Steam/">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script>
+            
+            const games = [
+                {
+                    name: "Grand Theft Auto IV",
+                    price: "$59.99",
+                    img: "img/gtaiv.png"
+                },
+                {
+                    name: "Half Life 2",
+                    price: "$9.99",
+                    img: "img/halflife2.png"
+                },
+                {
+                    name: "Left 4 Dead",
+                    price: "$14.99",
+                    img: "img/l4d.png"
+                },
+                {
+                    name: "The Witcher",
+                    price: "$19.99",
+                    img: "img/witcher.png"
+                },
+                {
+                    name: "Counter Strike: Source",
+                    price: "$14.99",
+                    img: "img/cs.png"
+                },
+                {
+                    name: "The Elder Scrolls IV: Oblivion",
+                    price: "$29.99",
+                    img: "img/oblivion.png"
+                },
+                {
+                    name: "Portal",
+                    price: "$4.99",
+                    img: "img/portal2.png"
+                }
+            ];
+
+            let index = 0;
+
+            const img = document.querySelector(".slide img");
+            const title = document.querySelector(".info h2");
+            const price = document.querySelector(".slide .price");
+
+            document.querySelector(".next").onclick = () => {
+                index = (index + 1) % games.length;
+                update();
+            };
+
+            document.querySelector(".prev").onclick = () => {
+                index = (index - 1 + games.length) % games.length;
+                update();
+            };
+
+            function update() {
+                img.src = games[index].img;
+                title.textContent = games[index].name;
+                price.textContent = games[index].price;
+            }
+
+            update();
+        </script>
+    </body>
+
+</html>

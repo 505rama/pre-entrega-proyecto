@@ -1,0 +1,570 @@
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #4c5844;
+    color: #ffffff;
+}
+
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+}
+
+
+/* Header */
+.header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.header h1 {
+margin: 0px;
+margin-left: 30px;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 260px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+}
+
+
+/* Video principal */
+.trailergta {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.trailergta-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trailergta-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.trailergta-content h2 {
+    font-size: 3rem;
+}
+
+.trailergta-content p {
+    margin: 15px 0;
+}
+
+
+/* Boton */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+
+    background: linear-gradient(to top, #a4d7f5, #eaf6ff);
+    color: #1a1a1a;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+
+    transition: all 0.2s ease;
+}
+
+
+.btn:hover {
+    background: linear-gradient(to top, #8ecdf0, #dff3ff);
+}
+
+
+.btn:active {
+    background: linear-gradient(to top, #7fc4eb, #d0ecff);
+}
+
+
+/* Seccion Productos / Juegos / Catálogo */
+.store {
+    flex: 1;
+    min-height: 72vh;
+    background: #4c5844;
+    padding: 63px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.store-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background: #232323;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+/* Sidebar */
+.sidebar {
+    color: #c6d4df;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #61c5ff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de busqueda*/
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 6px;
+    background: #111;
+    border: 1px solid #555;
+    color: #ccc;
+}
+
+.search-box button {
+    padding: 6px 10px;
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+/* Slide */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 720px;
+    object-fit: contain;
+}
+
+/* Info juegos*/
+.info h2 {
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.price {
+    color: #a4d007;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Botones juegos.html*/
+.prev, .next {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* Seccion Demos */
+.steam-section {
+    padding: 60px 40px;
+    background-color: #272926;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #717171;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    color: #84a643;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Reseñas */
+.resenias-section {
+    padding: 80px 20px;
+}
+
+.resenias-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.resenia-card {
+    background: #272926;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.resenia-card:hover {
+    transform: translateY(-5px);
+}
+
+.resenia-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #979797;
+    line-height: 1.6;
+}
+
+.resenia-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.resenia-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.resenia-author h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.resenia-author span {
+    font-size: 13px;
+    color: #979797;
+}
+
+
+/* Contacto */
+.contacto-section {
+    padding: 80px 20px;
+    background-color: #272926;
+}
+
+.contacto-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+/* Info */
+.contacto-info h3,
+.contacto-form h3 {
+    margin-bottom: 20px;
+}
+
+.contacto-info p {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.contacto-info iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/* Form */
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contacto-form button {
+    width: fit-content;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+
+/* Media queries seccion contacto o soporte */
+@media (max-width: 900px) {
+
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-section {
+        padding: 60px 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contacto-info iframe {
+        height: 200px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 14px;
+    }
+
+    .contacto-form button {
+        width: 100%;
+    }
+
+}
+
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #eee;
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* Columnas */
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-box p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+
+/* Links */
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+/* Redes */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* Responsive footer */
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+}
