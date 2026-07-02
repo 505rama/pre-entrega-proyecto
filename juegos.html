@@ -4,11 +4,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Steam 2008</title>
-        <meta name="description" content="">
+        <title>Steam 2008 | Catálogo de juegos</title>
+        <meta name="description" content="Catálogo de juegos de Steam 2008">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
     </head>
+
+    
 
     <body>
 
@@ -28,7 +30,24 @@
                     <li><a href="#contacto">Soporte</a></li>
                 </ul>
             </nav>
+
+            <div class="cart" id="cart-button">
+                🛒 CARRITO<span id="cart-count">0</span>
+            </div>
         </header>
+
+        <aside id="cart-container" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Carrito</h3>
+                <button id="close-cart">✖</button>
+            </div>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-footer">
+                <p>Total: <span id="cart-total">$0</span></p>
+            </div>
+        </aside>
 
         <main class="store">
             <div class="store-container">
@@ -66,6 +85,9 @@
                             <div class="info">
                                 <h2>Grand Theft Auto IV</h2>
                                 <p class="price">$59.99</p>
+                                <button id="slider-add-btn" class="add-btn">
+                                    Agregar al carrito
+                                </button>
                             </div>    
                         </div>
                         <button class="next">▶</button>
@@ -109,70 +131,7 @@
                 </div>
             </div>
         </footer>
-        <script>
-            
-            const games = [
-                {
-                    name: "Grand Theft Auto IV",
-                    price: "$59.99",
-                    img: "img/gtaiv.png"
-                },
-                {
-                    name: "Half Life 2",
-                    price: "$9.99",
-                    img: "img/halflife2.png"
-                },
-                {
-                    name: "Left 4 Dead",
-                    price: "$14.99",
-                    img: "img/l4d.png"
-                },
-                {
-                    name: "The Witcher",
-                    price: "$19.99",
-                    img: "img/witcher.png"
-                },
-                {
-                    name: "Counter Strike: Source",
-                    price: "$14.99",
-                    img: "img/cs.png"
-                },
-                {
-                    name: "The Elder Scrolls IV: Oblivion",
-                    price: "$29.99",
-                    img: "img/oblivion.png"
-                },
-                {
-                    name: "Portal",
-                    price: "$4.99",
-                    img: "img/portal2.png"
-                }
-            ];
-
-            let index = 0;
-
-            const img = document.querySelector(".slide img");
-            const title = document.querySelector(".info h2");
-            const price = document.querySelector(".slide .price");
-
-            document.querySelector(".next").onclick = () => {
-                index = (index + 1) % games.length;
-                update();
-            };
-
-            document.querySelector(".prev").onclick = () => {
-                index = (index - 1 + games.length) % games.length;
-                update();
-            };
-
-            function update() {
-                img.src = games[index].img;
-                title.textContent = games[index].name;
-                price.textContent = games[index].price;
-            }
-
-            update();
-        </script>
+        <script src="js/script.js"></script>
     </body>
 
 </html>

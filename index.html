@@ -4,12 +4,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Steam 2008</title>
-        <meta name="description" content="">
+        <title>Steam 2008 | Tienda de videojuegos </title>
+        <meta name="description" content="Steam 2008 es una tienda online basada en la página original de Steam de esos años, utilizando un estilo retro y nostálgico.">
+        <meta name="keywords" content="Steam, videojuegos, tienda, juegos PC, gta, cs, gaming">
+        <meta name="author" content="505rama">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-
 
     <body>
 
@@ -31,8 +32,23 @@
                     <li><a href="#contacto">Soporte</a></li>
                 </ul>
             </nav>
+
+            <div class="cart" id="cart-button">
+                🛒 CARRITO<span id="cart-count">0</span>
+            </div>
         </header>
 
+        <!-- Sección "Carrito" -->
+        <aside id="cart-container" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Carrito</h3>
+                <button id="close-cart">✖</button>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-footer">
+                <p>Total: <span id="cart-total">$0</span></p>
+            </div>
+        </aside>
 
         <main>
 
@@ -48,46 +64,10 @@
                 </div>
             </section>
 
-            <!-- Sección "Demos" -->
+            <!-- Sección "Juegos index" -->
             <section class="steam-section" id="demos">
-                <h2 class="section-title">Demos gratuitas</h2>
-                <div class="cards-container">
-                    <!-- Card 1 -->
-                    <div class="card">
-                        <img src="img/cssou.png" alt="Counter Strike: Source">
-                        <div class="card-content">
-                            <h3>Counter Strike: Source™</h3>
-                            <p>Combina la intensidad de las partidas por equipos con la avanzada tecnología de Source™. Con sus vanguardistas gráficos, nuevos sonidos y un mayor dinamismo.</p>
-                            <a href="#cssource">Descargar ahora</a>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="card">
-                        <img src="img/halflife2.png" alt="Half Life 2">
-                        <div class="card-content">
-                            <h3>Half Life™ 2</h3>
-                            <p>Tras ser reanimado de la estasis en la metrópoli ocupada de Ciudad 17, Gordon Freeman se une a Alyx Vance para liderar un desesperado movimiento de resistencia humano.</p>
-                            <a href="#halflife2">Descargar ahora</a>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="card">
-                        <img src="img/oblivion.png" alt="The Elder Scrolls IV: Oblivion">
-                        <div class="card-content">
-                            <h3>TES IV: Oblivion®</h3>
-                            <p>TES IV: Oblivion® presenta uno de los mejores juegos de rol de todos los tiempos como nunca se había visto hasta ahora. El mundo más detallado y emocionante jamás creado.</p>
-                            <a href="#oblivion">Descargar ahora</a>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="card">
-                        <img src="img/portal.png" alt="Portal">
-                        <div class="card-content">
-                            <h3>Portal™</h3>
-                            <p>Ambientado en los misteriosos laboratorios de Aperture Science, Portal es uno de los juegos más innovadores de los últimos tiempos y ofrece incontables horas de puzzles. </p>
-                            <a href="#portal">Descargar ahora</a>
-                        </div>
-                    </div>
+                <h2 class="section-title">Juegos</h2>
+                <div id="api-products" class="cards-container">
                 </div>
             </section>
 
@@ -209,6 +189,8 @@
             </div>
 
         </footer>
+
+        <script src="js/script.js"></script>
 
     </body>
 
